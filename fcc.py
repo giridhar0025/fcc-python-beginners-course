@@ -311,6 +311,57 @@ def cube(num):
 
 print(cube(3))  
 
+# def cube(num):
+#   return num*num*num
+
+# result = cube(4)
+# print(result)
+   
+# if statements 
+
+is_male = True # setting a variable
+
+if is_male: # if statement for condition is true
+  print("You are a male")
+else:   # if statement for condtion is false
+  print("You are not a male")  
+
+
+is_male = True # setting a variable
+is_tall = True # setting a second variable
+
+if is_male or is_tall:
+  print("You are a male or tall or both")
+else:   # if statement for condtion is false
+  print("You are not a male nor tall")
+
+  # and for a required type of condtion
+
+is_male = True # setting a variable
+is_tall = False # setting a second variable
+
+if is_male and is_tall:
+  print("You are a male or tall or both")
+else:   # if statement for condtion is false
+  print("You are not a male nor tall")
+
+  # elif condition
+
+is_male = False # setting a variable
+is_tall = True # setting a second variable
+
+if is_male and is_tall:
+  print("You are a male")
+
+elif is_male and not(is_tall):
+  print("you are a short male")
+
+elif not(is_male) and is_tall:
+  print("you are not a male but tall")
+else:   # if statement for condtion is false
+  print("You are not a male nor tall")
+
+# if statements & comparisions
 
 
    
