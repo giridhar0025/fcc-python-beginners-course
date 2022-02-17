@@ -363,5 +363,137 @@ else:   # if statement for condtion is false
 
 # if statements & comparisions
 
+def max_num(num1, num2, num3):
+  if num1 >= num2 and num1 >= num3:  # comparing num1 to num2 and num3
+    return num1
+  elif num1 >= num3 and num2 >= num3:
+    return num2
+  else:
+    return num3     
 
+print(max_num(300, 40, 500)) 
+   
+
+# Building a calculator
+
+num1 = float(input("Enter first number: "))
+op = float(input("Enter operator: "))
+num1 = float(input("Enter second number: "))
+
+if op == "+":
+  print(num1 + num2)
+elif op == "-":
+  print(num1 - num2)
+elif op == "/":
+  print(num1 / num2)
+elif op == "%":
+  print(num1 % num2)    
+
+# Dictionaries
+
+month_Conversions = {
+  "jan": "January",
+  "Feb": "Febraury",
+  "Mar": "March"
+}
+
+print(month_Conversions.get("Mar"))
+
+# While Loops
+
+i = 1
+while i <= 10:
+  print(i)
+  i += 1
+
+print("Done with Loop")
+
+# Building a Guessing Game
+        # creating required variables
+secret_word = "King" 
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+         # creating a loop to check the secret word
+while guess != secret_word and not(out_of_guesses):
+  if guess_count < guess_limit:
+    guess = input("Enter Guess: ")
+    guess_count += 1
+  else: 
+    out_of_guesses = True  
+
+if out_of_guesses:
+  print("out of guesses, you lose")
+else:  
+  print("You Win")
+
+# For loops Examples
+
+for letter in "Free code camp":
+  print(letter)
+
+friends = ["jim", "karen", "john"]
+for friend in friends:
+  print(friend)
+
+friends = ["jim", "karen", "john"]
+for index in range(10):
+  print(index)
+
+# Exponent Function using loops
+
+def power(base_num, pow_num):
+  result = 1
+  for index in range(pow_num):
+    result = result * base_num
+  return result  
+
+print(power(2, 3))
+
+# 2D Lists and Nested Loops
+
+number_grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [0]
+]
+
+print(number_grid[1][2]) # accessing elements in array
+
+number_grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [0]
+]
+
+for row in number_grid:
+  for col in row:
+    print(col)
+
+#  Building a translator
+
+def translate(phrase):
+  translation = ""
+  for letter in phrase:
+    if letter.loer() in "aeiou":
+      if letter .isupper():
+        translation = translation + "G"
+    else:
+      translation = translation + "g"
+  return translation
+
+print(translate(input("Enter a Phrase: ")))
+
+# Comments are ignored by the python when execution
+
+# Try/Except
+
+try:
+    number = int(input("Enter a Number: ")) 
+    print(number)
+except:
+  print("Invalid Input")
    
