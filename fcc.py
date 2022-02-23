@@ -496,4 +496,179 @@ try:
     print(number)
 except:
   print("Invalid Input")
-   
+
+# Using Except to print out the error information
+try:
+    answer = 10/2
+    number = int(input("Enter a Number: ")) 
+    print(number)
+
+except ZeroDivisionError as err:
+  print(err)    
+except:
+  print("Invalid Input")
+
+# Reading Files
+
+open("employees.txt", "r") # to reade the file
+open("employees.txt", "r+") # to read and write
+open("employees.txt", "w") # to write something on to opened file
+open("employees.txt", "a") # to append information on to a file
+
+ # whenever you open a file make sure to close the file
+
+employee_file = open("employees.txt", "r")
+employee_file.close()
+
+ # make sure the file is readable
+
+employee_file = open("employees.txt", "r")
+print(employee_file.readable())
+employee_file.close()
+
+employee_file = open("employees.txt", "r")
+print(employee_file.read()) # read a file
+employee_file.close()
+
+employee_file = open("employees.txt", "r")
+print(employee_file.readline()) # to read the first line of the file and add more similar statements to print more line from the file
+employee_file.close()
+
+employee_file = open("employees.txt", "r")
+print(employee_file.readlines()[1]) # read the mentioned index line from the file 
+employee_file.close()
+
+# using for loop to print lines from the file
+
+employee_file = open("employees.txt", "r")
+for employee in employee_file.readlines():
+  print(employee) # this will print all the lines from the file
+employee_file.close() 
+
+# Writing and appending to files 
+
+employee_file = open("employees.txt", "a") # adding something at end 
+employee_file.write("TOby - Human Resourses")
+employee_file.close()
+
+employee_file = open("employees.txt", "a") # adding something at end 
+employee_file.write("\nkelly - Customer service")
+employee_file.close()
+
+employee_file = open("employees.txt", "w") # this will overwrite the pre existing data to this new data
+employee_file.write("\nkelly - Customer service")
+employee_file.close()
+
+employee_file = open("employees1.txt", "w") # this will create a new file add this data
+employee_file.write("\nkelly - Customer service")
+employee_file.close()
+
+# Modules and Pip
+
+import usefull_tools
+
+print(usefull_tools.__file__(10)) # this will import the module from the file
+
+# Using Pip to install modules
+
+# Classes and Objects
+
+class student:
+  def __init__(self, name, major, gpa, is_on_probation):
+    self.name = name
+    self.major = major
+    self.gpa = gpa
+    self.is_on_probation = is_on_probation
+
+# from student import student
+
+student1 = ("jim", "Business", 3.1, False)
+student2 = ("Tom", "Art", 2.5, True)
+
+print(student1)
+print(student2.gpa)
+
+# Building a Multiple Choice Quiz
+
+from Question import Question
+
+question_prompts = [
+  "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+   "What color are Bananas?\n(a) Teal\n(b) Magneta\n(c) Yellow\n\n",
+   "What color are Strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n",
+] 
+
+questions = [
+  Question(question_prompts[0], "a"),
+  Question(question_prompts[1], "c"),
+  Question(question_prompts[2], "b"),
+]
+
+def run_test(questions):
+  score = 0
+  for question in questions:
+    answer = input(question.prompt)
+    if answer == question.answer:
+      score += 1
+  print("You got " + str(score) + "/" + str(len(questions)) + "correct")
+
+run_test(questions)   
+
+# Object Functions
+
+
+    # Creating class
+
+ # from Student import Student
+
+# student1 = Student("Oscar", "Accounting", 3.1)
+# student2 = Student("Peter", "Business", 3.8)
+
+# print(student1.on_honour_roll())
+
+class student:
+  def __init__(self, name, major, gpa):
+    self.name = name
+    self.major = major
+    self.gpa = gpa
+
+  def on_honour_roll(self):
+    if self.gpa >= 3.5:
+      return True
+    else:
+      return False    
+
+# Inheritence
+
+  # Creating class 
+class Chef:
+  def make_chicken(self):
+    print("The chef makes a chicken")
+  def make_salad(self):
+    print("The chef makes a salad")
+  def make_special_dish(self):
+    print("The chef makes a ribs")    
+
+ # Creating another class Chinese Chef
+# from Chef import Chef
+
+class ChineseChe(Chef): # here we inherit 
+
+  def make_chicken(self):
+    print("The chef makes a chicken")
+  def make_salad(self):
+    print("The chef makes a salad")
+  def make_special_dish(self):
+    print("The chef makes a ribs")
+  def make_fried_rice(self):
+    print("The chef makes fried rice")
+
+myChef = Chef()
+myChef.make_special_dish()
+
+# from Chinesechef import Chinesechef
+
+myChinesechef = Chef()
+myChinesechef.make_fried_rice()
+
+# Python Interpreter
